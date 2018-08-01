@@ -1,0 +1,32 @@
+/* CSS style file */
+h4 {
+    color: green;
+    font-display: courier;
+    font-size: 30px;
+}
+
+h5 {
+    font-size:60px;
+    /* Draws a border around the element. */
+    border: 2px solid yellow;
+    /* Space between the text and the border. */
+    padding: 10px;
+    /* Space outside the border. */
+    margin: 50px;
+}
+
+/* Styles for specifid id's, id must be unique. */
+#p01 {
+    color: aliceblue;
+}
+
+#p02 {
+    color: aqua;
+}
+
+/* Styling using classes. */
+p.error {
+    color: red;
+    font-family: courier;
+    text-align: right;
+}

@@ -1,0 +1,49 @@
+<!-- Using CSS (Cascading Style Sheets) styles.
+    Defined like this: <tagname style="property:value;">
+    Three types of style declarations:
+        - Inline, using style attribute on each element.
+        - Internal, declaring parameters inside the head element.
+        - External, using a .css file. -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>CSS Styles</title>
+    
+    <!-- Internal styling -->
+    <style>
+        h2 {color:steelblue;}
+        h3 {color:slateblue;}
+    </style>
+
+    <!-- External styling, the reference can be relative or absolute path, or a full URL. -->
+    <link rel="stylesheet" href="mystyles.css">
+
+</head>
+<!-- Background image can be used backgroud-image:url('image_path') -->
+<body style="background-color:darkgray;">
+    <!-- Inline styling -->
+    <h1 style="color:black;">This is a h1.</h1>
+    
+    <!-- Color can be also specified using rgba. -->
+    <p style="color:rgba(255, 99, 71, 0.5);font-family:courier;font-size:150%;">Using inline styling.</p>
+    
+    <!-- Text alignment. -->
+    <p style="text-align:center;font-size:50px">Centered paragraph.</p>
+
+    <h2>Using internal styling.</h2>
+    <h3>Same same.</h3>
+
+    <h4>Using external styling from .css file.</h4>
+    <h5>Same same.</h5>
+
+    <!-- Using id for style. -->
+    <p id="p01">I am a p using an id.</p>
+    <p id="p02">I am a p using a different id.</p>
+
+    <!-- Using class for style. -->
+    <p class="error">I am a p using a style class.</p>
+    
+</body>
+</html>
