@@ -1,4 +1,17 @@
 /* CSS style file */
+
+/* CSS selectors are used to "find" (or select) HTML elements based
+on their element name, id, class, attribute, and more. */
+
+/*
+selector_1, ..., selector_n {
+    declaration_1;
+    ...;
+    declaration_n;
+}
+*/
+
+/* Tag as a selector */
 h4 {
     color: green;
     font-display: courier;
@@ -16,6 +29,7 @@ h5 {
 }
 
 /* Styles for specifid id's, id must be unique. */
+/* All HTML elements with id='p01' */
 #p01 {
     color: aliceblue;
 }
@@ -25,8 +39,41 @@ h5 {
 }
 
 /* Styling using classes. */
+/* All HTML elements with class=<selector_name> */
+.ilikeblue {
+    color: blue;
+}
+
+/* All p elements with <p class=<selector_name>> */
 p.error {
     color: red;
     font-family: courier;
     text-align: right;
 }
+
+/* All elements inside a p element with class=<selector_name> */
+p .insideerror {
+    color: red;
+    font-family: courier;
+    text-align: right;
+}
+
+/* All first level elements inside a p element with class=<selector_name> */
+p>.directsonerror {
+    color: red;
+    font-family: courier;
+    text-align: right;
+}
+
+/* Special cases */
+/* Mouse hovering on the element */
+p:hover {
+   color: green;
+}
+
+/* Commons
+:active
+:enabled
+:invalid
+*/
+
