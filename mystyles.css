@@ -4,6 +4,8 @@
 on their element name, id, class, attribute, and more. */
 
 /*
+More than one selector can be grouped
+
 selector_1, ..., selector_n {
     declaration_1;
     ...;
@@ -12,6 +14,11 @@ selector_1, ..., selector_n {
 */
 
 /* Tag as a selector */
+body {
+    font-family: Open sans;
+}
+
+
 h4 {
     color: green;
     font-display: courier;
