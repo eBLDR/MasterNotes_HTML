@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with Forms</title>
+</head>
+<body>
+    <!-- Form element defines a form that is used to collect user input.
+    action attribute defines the action to be performed when the form is submitted.
+    If the action attribute is omitted, the action is set to the current page.
+    method attribute specifies the HTTP method to be used when submitting the form data.
+
+    The target attribute specifies if the submitted result will open in a new browser tab ("_blank"),
+    a frame, or in the current window.
+    The default value is "_self" which means the form will be submitted in the current window.
+    -->
+    <form action="/action_page.html" method="get">
+        <div>
+        <!-- Defines a one-line text input field. -->
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname">
+        </div>
+
+        <div>
+        <!-- Defines a radio button (for selecting one of many choices). -->
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+        </div>
+
+        <div>
+        <!-- Defines a submit button (for submitting the form). -->
+        <input type="submit" value="Submit!">
+        </div>
+    </form>
+</body>
+</html>
