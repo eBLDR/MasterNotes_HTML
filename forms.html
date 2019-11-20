@@ -1,39 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Working with Forms</title>
-</head>
-<body>
-    <!-- Form element defines a form that is used to collect user input.
-    action attribute defines the action to be performed when the form is submitted.
-    If the action attribute is omitted, the action is set to the current page.
-    method attribute specifies the HTTP method to be used when submitting the form data.
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Demo</title>
+    </head>
+    <body>
+        <h1>Form Demo</h1>
+        <!-- Form element defines a form that is used to collect user input.
+        action attribute defines the action to be performed when the form is submitted.
+        If the action attribute is omitted, the action is set to the current page.
+        method attribute specifies the HTTP method to be used when submitting the form data.
 
-    The target attribute specifies if the submitted result will open in a new browser tab ("_blank"),
-    a frame, or in the current window.
-    The default value is "_self" which means the form will be submitted in the current window.
-    -->
-    <form action="/action_page.html" method="get">
-        <div>
-        <!-- Defines a one-line text input field. -->
-        First name:<br>
-        <input type="text" name="firstname"><br>
-        Last name:<br>
-        <input type="text" name="lastname">
-        </div>
+        The target attribute specifies if the submitted result will open in a new browser tab ("_blank"),
+        a frame, or in the current window.
+        The default value is "_self" which means the form will be submitted in the current window.
 
-        <div>
-        <!-- Defines a radio button (for selecting one of many choices). -->
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other
-        </div>
+        Each input field must have a name attribute to be submitted.
+        If the name attribute is omitted, the data of that input field will not be sent at all.
+        -->
+        <form action="/action_page.html" method="get">
+            <p>
+                <!-- Defines a one-line text input field. -->
+                First name:<br>
+                <input type="text" name="firstname"><br>
+                Last name:<br>
+                <!-- Set a display size with size attribute. -->
+                <input type="text" name="lastname" size="40"><br>
+                Password:<br>
+                <!-- Set a maximum size with maxlength attribute. -->
+                <input type="password" name="password" maxlength="5">
+            </p>
 
-        <div>
-        <!-- Defines a submit button (for submitting the form). -->
-        <input type="submit" value="Submit!">
-        </div>
-    </form>
-</body>
+            <p>
+                Birthday:
+                <!-- Defines a date input field.
+                max="yyyy-mm-dd" and min="yyyy-mm-dd" can be specified. -->
+                <input type="date" name="bday"><br>
+
+                <!-- Defines a time input field.
+                disable attribute can be use to disable an input field. -->
+                Select a time:
+                <input type="time" name="usr_time" disabled>
+            </p>
+
+            <p>
+                <!-- Defines a number input field. -->
+                Quantity (between 1 and 5):
+                <input type="number" name="quantity" min="1" max="5">
+            </p>
+
+            <!-- fieldset will group data and draw a border around the elements. -->
+            <fieldset>
+                <!-- Legend for the field set. -->
+                <legend>Selecting Elements</legend>
+                <p>
+                    <!-- Defines a radio button (for selecting one of many choices). -->
+                    <input type="radio" name="gender" value="male" checked> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Other
+                </p>
+
+                <p>
+                    <!-- Defines a checkbox button. -->
+                    <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+                    <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+                    <!-- checked attribute will check the option by default -->
+                    <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+                </p>
+
+                <p>
+                    <!-- Defines a drop down list. -->
+                    <label>Select list</label>
+                    <!-- size="3" will define the elements to be displayed-->
+                    <select name="option">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <!-- selected attribute to select the option by default -->
+                        <option value="3" selected>Three</option>
+                        <option value="5">Five</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <p>
+                <textarea name="message" rows="10" cols="30">The cat was playing in the garden.
+                </textarea>
+            </p>
+
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+            <p>
+                <!-- Defines a submit button (for submitting the form). -->
+                <input type="submit" value="Submit!">
+                <!-- Defines a reset button (will clear the form). -->
+                <input type="reset">
+            </p>
+        </form>
+    </body>
 </html>
